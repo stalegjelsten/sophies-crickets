@@ -22,7 +22,7 @@
 <main>
 	<div id="hoved">
 		<h1>Sophie says</h1>
-		<button on:click|self|preventDefault={(playing = () => play())}>Summ!</button>
+		<button on:click|self|preventDefault={(playing = () => play())}>SUMM!</button>
 	</div>
 </main>
 
@@ -56,16 +56,16 @@
 		cursor: pointer;
 		border-radius: 6px;
 		border: 2px solid #ff4742;
-		color: #fff;
-		background-color: #ff4742;
-		padding: 8px;
-		box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
-		font-weight: 800;
-		font-size: 16px;
-		height: 42px;
-	}
-	button:hover {
 		background: 0 0;
 		color: #ff4742;
+		padding: 15pt 30pt 15pt 30pt;
+		box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+		font-weight: 800;
+		font-size: 36pt;
+		font-family: 'Red Hat Display', Arial;
+	}
+	button:hover {
+		color: #fff;
+		background-color: #ff4742;
 	}
 </style>
