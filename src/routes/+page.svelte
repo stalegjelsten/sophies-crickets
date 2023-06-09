@@ -32,6 +32,7 @@
 		background: url('/wp.jpeg');
 		background-size: cover;
 		background-repeat: no-repeat;
+		background-position: center center;
 		overflow: hidden;
 	}
 	main {
