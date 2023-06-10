@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	let playing = false;
-	let buttonClass = "silent";
+	let buttonClass = 'silent';
 	let audio;
 	onMount(() => {
 		audio = new Audio('https://cdn.pixabay.com/download/audio/2021/08/09/audio_9a2f521fc5.mp3');
@@ -11,12 +11,12 @@
 		if (playing == true) {
 			audio.pause();
 			playing = false;
-			buttonClass = "silent";
+			buttonClass = 'silent';
 		} else {
 			await audio.play();
 			audio.loop = true;
 			playing = true;
-			buttonClass = "playing";
+			buttonClass = 'playing';
 		}
 		console.log(playing);
 	};
@@ -25,7 +25,9 @@
 <main>
 	<div id="hoved">
 		<h1>Sophie says</h1>
-		<button on:click|self|preventDefault={(playing = () => play())} class={buttonClass}>SUMM!</button>
+		<button on:click|self|preventDefault={(playing = () => play())} class={buttonClass}
+			>SUMM!</button
+		>
 	</div>
 </main>
 
@@ -61,6 +63,7 @@
 		border-radius: 6px;
 		border: 4px solid #ff4742;
 		background: 0 0;
+		backdrop-filter: blur(1px);
 		color: #fff;
 		/* color: #ff4742; */
 		padding: 15pt 30pt 15pt 30pt;
@@ -78,37 +81,37 @@
 
 	@keyframes shake {
 		0% {
-			transform: translate(1px, 1px) rotate(0deg);
+			transform: scale(1.2) translate(1px, 1px) rotate(0deg);
 		}
 		10% {
-			transform: translate(-1px, -2px) rotate(-1deg);
+			transform: scale(1.2) translate(-1px, -2px) rotate(-1deg);
 		}
 		20% {
-			transform: translate(-3px, 0px) rotate(1deg);
+			transform: scale(1.2) translate(-3px, 0px) rotate(1deg);
 		}
 		30% {
-			transform: translate(3px, 2px) rotate(0deg);
+			transform: scale(1.2) translate(3px, 2px) rotate(0deg);
 		}
 		40% {
-			transform: translate(1px, -1px) rotate(1deg);
+			transform: scale(1.2) translate(1px, -1px) rotate(1deg);
 		}
 		50% {
-			transform: translate(-1px, 2px) rotate(-1deg);
+			transform: scale(1.2) translate(-1px, 2px) rotate(-1deg);
 		}
 		60% {
-			transform: translate(-3px, 1px) rotate(0deg);
+			transform: scale(1.2) translate(-3px, 1px) rotate(0deg);
 		}
 		70% {
-			transform: translate(3px, 1px) rotate(-1deg);
+			transform: scale(1.2) translate(3px, 1px) rotate(-1deg);
 		}
 		80% {
-			transform: translate(-1px, -1px) rotate(1deg);
+			transform: scale(1.2) translate(-1px, -1px) rotate(1deg);
 		}
 		90% {
-			transform: translate(1px, 2px) rotate(0deg);
+			transform: scale(1.2) translate(1px, 2px) rotate(0deg);
 		}
 		100% {
-			transform: translate(1px, -2px) rotate(-1deg);
+			transform: scale(1.2) translate(1px, -2px) rotate(-1deg);
 		}
 	}
 	button.silent {
@@ -118,6 +121,7 @@
 		border-radius: 6px;
 		border: 4px solid #ff4742;
 		background: 0 0;
+		backdrop-filter: blur(1px);
 		color: #fff;
 		/* color: #ff4742; */
 		padding: 15pt 30pt 15pt 30pt;
