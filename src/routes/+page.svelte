@@ -64,6 +64,7 @@
 		border: 4px solid #ff4742;
 		background: 0 0;
 		backdrop-filter: blur(1px);
+		-webkit-backdrop-filter: blur(1px);
 		color: #fff;
 		/* color: #ff4742; */
 		padding: 15pt 30pt 15pt 30pt;
@@ -122,6 +123,7 @@
 		border: 4px solid #ff4742;
 		background: 0 0;
 		backdrop-filter: blur(1px);
+		-webkit-backdrop-filter: blur(1px);
 		color: #fff;
 		/* color: #ff4742; */
 		padding: 15pt 30pt 15pt 30pt;
