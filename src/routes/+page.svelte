@@ -54,7 +54,7 @@
 	h1 {
 		color: #fff;
 		font-family: 'Red Hat Display', Arial;
-		font-size: 72pt;
+		font-size: clamp(44pt, 8vw, 72pt);
 	}
 	button.playing {
 		display: inline-block;
