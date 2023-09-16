@@ -33,7 +33,7 @@
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap');
-	:global(body) {
+	:global(html) {
 		background: url('/wp.jpeg');
 		background-size: cover;
 		background-repeat: no-repeat;
