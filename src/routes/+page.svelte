@@ -40,6 +40,7 @@
 		background-position: center center;
 		overflow: hidden;
 	}
+
 	main {
 		height: 100vh;
 		width: 100vw;
@@ -48,14 +49,14 @@
 		align-items: center;
 		text-align: center;
 		justify-content: center;
-		vertical-align: center;
-		flex-direction: column;
 	}
+
 	h1 {
 		color: #fff;
 		font-family: 'Red Hat Display', Arial;
 		font-size: clamp(44pt, 8vw, 72pt);
 	}
+
 	button.playing {
 		display: inline-block;
 		outline: 0;
@@ -125,7 +126,6 @@
 		backdrop-filter: blur(1px);
 		-webkit-backdrop-filter: blur(1px);
 		color: #fff;
-		/* color: #ff4742; */
 		padding: 15pt 30pt 15pt 30pt;
 		box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
 		font-weight: 800;
