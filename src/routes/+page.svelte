@@ -1,31 +1,33 @@
 <script>
 	import { onMount } from 'svelte';
-	let playing = false;
-	let buttonClass = 'silent';
+
+  let playing = $state(false);
+  let buttonClass = $state('silent')
 	let audio;
+  $inspect(playing)
+
 	onMount(() => {
 		audio = new Audio('https://cdn.pixabay.com/download/audio/2021/08/09/audio_9a2f521fc5.mp3');
+    audio.loop = true;
 	});
 
 	const play = async () => {
-		if (playing == true) {
+		if (playing) {
 			audio.pause();
 			playing = false;
 			buttonClass = 'silent';
 		} else {
-			await audio.play();
-			audio.loop = true;
+			await audio.play().catch(err => console.error('Play error:', err));;
 			playing = true;
 			buttonClass = 'playing';
 		}
-		console.log(playing);
 	};
 </script>
 
 <main>
 	<div id="hoved">
 		<h1>Sophie says</h1>
-		<button on:click|self|preventDefault={(playing = () => play())} class={buttonClass}
+		<button onclick={play} class={buttonClass}
 			>SUMM!</button
 		>
 	</div>
